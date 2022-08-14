@@ -1,10 +1,9 @@
 package org.example.linked_list;
 
 import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class DoublyLinkedListTest {
     DoublyLinkedList<Integer> linkedList;
@@ -23,8 +22,8 @@ class DoublyLinkedListTest {
     void isEmpty_emptyLinkedList_returnTrue() {
         var empty = linkedList.isEmpty();
 
-        assertTrue(empty);
-        assertEquals(0, linkedList.size);
+        Assertions.assertTrue(empty);
+        Assertions.assertEquals(0, linkedList.size);
     }
 
     @Test
@@ -33,16 +32,16 @@ class DoublyLinkedListTest {
 
         var empty = linkedList.isEmpty();
 
-        assertFalse(empty);
-        assertEquals(1, linkedList.size);
+        Assertions.assertFalse(empty);
+        Assertions.assertEquals(1, linkedList.size);
     }
 
     @Test
     void getHead_emptyLinkedList_returnNull() {
         var result = linkedList.getHead();
 
-        assertNull(result);
-        assertEquals(0, linkedList.size);
+        Assertions.assertNull(result);
+        Assertions.assertEquals(0, linkedList.size);
     }
 
     @Test
@@ -51,8 +50,8 @@ class DoublyLinkedListTest {
 
         var result = linkedList.getHead();
 
-        assertEquals(10, result);
-        assertEquals(1, linkedList.size);
+        Assertions.assertEquals(10, result);
+        Assertions.assertEquals(1, linkedList.size);
     }
 
 
@@ -63,7 +62,7 @@ class DoublyLinkedListTest {
 
         var result = linkedList.getHead();
 
-        assertEquals(30, result);
+        Assertions.assertEquals(30, result);
     }
 
     @Test
@@ -74,14 +73,14 @@ class DoublyLinkedListTest {
 
         var result = linkedList.getHead();
 
-        assertEquals(4, result);
+        Assertions.assertEquals(4, result);
     }
 
     @Test
     void getTail_emptyLinkedList_returnNull() {
         var result = linkedList.getTail();
 
-        assertNull(result);
+        Assertions.assertNull(result);
     }
 
     @Test
@@ -90,7 +89,7 @@ class DoublyLinkedListTest {
 
         var result = linkedList.getTail();
 
-        assertEquals(10, result);
+        Assertions.assertEquals(10, result);
     }
 
     @Test
@@ -100,7 +99,7 @@ class DoublyLinkedListTest {
 
         var result = linkedList.getTail();
 
-        assertEquals(30, result);
+        Assertions.assertEquals(30, result);
     }
 
     @Test
@@ -111,7 +110,7 @@ class DoublyLinkedListTest {
 
         var result = linkedList.getTail();
 
-        assertEquals(8, result);
+        Assertions.assertEquals(8, result);
     }
 
     @Test
@@ -124,7 +123,7 @@ class DoublyLinkedListTest {
 
         var result = linkedList.getHead();
 
-        assertEquals(8, result);
+        Assertions.assertEquals(8, result);
     }
 
     @Test
@@ -137,14 +136,14 @@ class DoublyLinkedListTest {
 
         var result = linkedList.getTail();
 
-        assertEquals(0, result);
+        Assertions.assertEquals(0, result);
     }
 
     @Test
     void contain_emptyItemLinkedList_returnFalse() {
         var result = linkedList.contain(10);
 
-        assertFalse(result);
+        Assertions.assertFalse(result);
     }
 
 
@@ -156,7 +155,7 @@ class DoublyLinkedListTest {
 
         var result = linkedList.contain(6);
 
-        assertFalse(result);
+        Assertions.assertFalse(result);
     }
 
     @Test
@@ -168,7 +167,7 @@ class DoublyLinkedListTest {
 
         var result = linkedList.contain(6);
 
-        assertTrue(result);
+        Assertions.assertTrue(result);
     }
 
 
@@ -176,7 +175,7 @@ class DoublyLinkedListTest {
     void remove_emptyLinkedList_returnFalse() {
         var result = linkedList.remove(6);
 
-        assertFalse(result);
+        Assertions.assertFalse(result);
     }
 
 
@@ -187,8 +186,8 @@ class DoublyLinkedListTest {
         var result = linkedList.remove(6);
         var empty = linkedList.isEmpty();
 
-        assertTrue(empty);
-        assertTrue(result);
+        Assertions.assertTrue(empty);
+        Assertions.assertTrue(result);
     }
 
     @Test
@@ -199,15 +198,15 @@ class DoublyLinkedListTest {
         var result = linkedList.remove(12);
         var size = linkedList.size;
 
-        assertEquals(1, size);
-        assertTrue(result);
+        Assertions.assertEquals(1, size);
+        Assertions.assertTrue(result);
     }
 
     @Test
     void removeHead_emptyLinkedList_returnFalse() {
         var result = linkedList.removeHead();
 
-        assertFalse(result);
+        Assertions.assertFalse(result);
     }
 
 
@@ -218,8 +217,8 @@ class DoublyLinkedListTest {
         var result = linkedList.removeHead();
         var empty = linkedList.isEmpty();
 
-        assertTrue(empty);
-        assertTrue(result);
+        Assertions.assertTrue(empty);
+        Assertions.assertTrue(result);
     }
 
     @Test
@@ -231,9 +230,9 @@ class DoublyLinkedListTest {
         var head = linkedList.getHead();
         var size = linkedList.size;
 
-        assertEquals(12, head);
-        assertEquals(1, size);
-        assertTrue(result);
+        Assertions.assertEquals(12, head);
+        Assertions.assertEquals(1, size);
+        Assertions.assertTrue(result);
     }
 
     @Test
@@ -246,16 +245,16 @@ class DoublyLinkedListTest {
         var head = linkedList.getHead();
         var size = linkedList.size;
 
-        assertEquals(5, head);
-        assertEquals(2, size);
-        assertTrue(result);
+        Assertions.assertEquals(5, head);
+        Assertions.assertEquals(2, size);
+        Assertions.assertTrue(result);
     }
 
     @Test
     void removeTail_emptyLinkedList_returnFalse() {
         var result = linkedList.removeTail();
 
-        assertFalse(result);
+        Assertions.assertFalse(result);
     }
 
 
@@ -266,8 +265,8 @@ class DoublyLinkedListTest {
         var result = linkedList.removeTail();
         var empty = linkedList.isEmpty();
 
-        assertTrue(empty);
-        assertTrue(result);
+        Assertions.assertTrue(empty);
+        Assertions.assertTrue(result);
     }
 
     @Test
@@ -279,9 +278,9 @@ class DoublyLinkedListTest {
         var head = linkedList.getHead();
         var size = linkedList.size;
 
-        assertEquals(5, head);
-        assertEquals(1, size);
-        assertTrue(result);
+        Assertions.assertEquals(5, head);
+        Assertions.assertEquals(1, size);
+        Assertions.assertTrue(result);
     }
 
     @Test
@@ -294,9 +293,9 @@ class DoublyLinkedListTest {
         var head = linkedList.getTail();
         var size = linkedList.size;
 
-        assertEquals(5, head);
-        assertEquals(2, size);
-        assertTrue(result);
+        Assertions.assertEquals(5, head);
+        Assertions.assertEquals(2, size);
+        Assertions.assertTrue(result);
     }
 
 
@@ -308,11 +307,11 @@ class DoublyLinkedListTest {
         var results = linkedList.iterator();
         var size = linkedList.size;
 
-        assertEquals(5, size);
+        Assertions.assertEquals(5, size);
         for (int i = 0; i < 5; i++) {
             var result = linkedList.getHead();
             linkedList.removeHead();
-            assertEquals(result, results.next());
+            Assertions.assertEquals(result, results.next());
         }
     }
 
@@ -324,11 +323,11 @@ class DoublyLinkedListTest {
         var results = linkedList.reverseIterator();
         var size = linkedList.size;
 
-        assertEquals(5, size);
+        Assertions.assertEquals(5, size);
         for (int i = 0; i < 5; i++) {
             var result = linkedList.getTail();
             linkedList.removeTail();
-            assertEquals(result, results.next());
+            Assertions.assertEquals(result, results.next());
         }
     }
 
@@ -339,12 +338,12 @@ class DoublyLinkedListTest {
 
         var size = linkedList.size;
 
-        assertEquals(5, size);
+        Assertions.assertEquals(5, size);
 
         for (Integer integer : linkedList) {
             var result = linkedList.getHead();
             linkedList.removeHead();
-            assertEquals(result, integer);
+            Assertions.assertEquals(result, integer);
         }
     }
 
@@ -356,7 +355,7 @@ class DoublyLinkedListTest {
         linkedList.clear();
         var empty = linkedList.isEmpty();
 
-        assertTrue(empty);
+        Assertions.assertTrue(empty);
 
     }
 }
