@@ -4,7 +4,7 @@ import java.util.Iterator;
 
 
 public class DoublyLinkedList<T> implements Iterable<T> {
-    int size = 0;
+    public int size = 0;
     Node head = null;
     Node tail = null;
 
@@ -30,16 +30,15 @@ public class DoublyLinkedList<T> implements Iterable<T> {
      *
      * @return True if the list is empty, false otherwise.
      */
-    boolean isEmpty() {
+    public boolean isEmpty() {
         return head == null;
     }
 
     /**
      * @return The last node in the first or null if empty
      */
-    T getHead() {
-        if (isEmpty())
-            return null;
+    public T getHead() {
+        if (isEmpty()) return null;
         return head.value;
     }
 
@@ -47,9 +46,8 @@ public class DoublyLinkedList<T> implements Iterable<T> {
     /**
      * @return The last node in the last or null if empty
      */
-    T getTail() {
-        if (isEmpty())
-            return null;
+    public T getTail() {
+        if (isEmpty()) return null;
         return tail.value;
     }
 
@@ -59,9 +57,8 @@ public class DoublyLinkedList<T> implements Iterable<T> {
      *
      * @param value The value to add to the start of the list
      */
-    void addHead(T value) {
-        if (isEmpty())
-            head = tail = new Node(value);
+    public void addHead(T value) {
+        if (isEmpty()) head = tail = new Node(value);
         else {
             head.prev = new Node(value, null, head);
             head = head.prev;
@@ -75,9 +72,8 @@ public class DoublyLinkedList<T> implements Iterable<T> {
      *
      * @param value The value to add to the end of the list
      */
-    void addTail(T value) {
-        if (isEmpty())
-            head = tail = new Node(value);
+    public void addTail(T value) {
+        if (isEmpty()) head = tail = new Node(value);
         else {
             tail.next = new Node(value, tail, null);
             tail = tail.next;
@@ -90,9 +86,8 @@ public class DoublyLinkedList<T> implements Iterable<T> {
      *
      * @return True if the item is removed, false otherwise.
      */
-    boolean removeHead() {
-        if (isEmpty())
-            return false;
+    public boolean removeHead() {
+        if (isEmpty()) return false;
 
         if (size == 1) {
             head = tail = null;
@@ -111,9 +106,8 @@ public class DoublyLinkedList<T> implements Iterable<T> {
      *
      * @return True if the item is removed, false otherwise.
      */
-    boolean removeTail() {
-        if (isEmpty())
-            return false;
+    public boolean removeTail() {
+        if (isEmpty()) return false;
 
         if (size == 1) {
             head = tail = null;
@@ -135,27 +129,22 @@ public class DoublyLinkedList<T> implements Iterable<T> {
      * @param value item value to remove
      * @return True if the item is removed, false otherwise.
      */
-    boolean remove(T value) {
+    public boolean remove(T value) {
         var found = find(value);
-        if (found == null)
-            return false;
+        if (found == null) return false;
 
         var prev = found.prev;
         var next = found.next;
 
         if (prev == null) {
             head = next;
-            if (head != null)
-                head.prev = null;
-        } else
-            prev.next = next;
+            if (head != null) head.prev = null;
+        } else prev.next = next;
 
         if (next == null) {
             tail = prev;
-            if (tail != null)
-                tail.next = null;
-        } else
-            next.prev = prev;
+            if (tail != null) tail.next = null;
+        } else next.prev = prev;
 
         size--;
         return true;
@@ -178,8 +167,7 @@ public class DoublyLinkedList<T> implements Iterable<T> {
     private Node find(T value) {
         var current = head;
         while (current != null) {
-            if (current.value == value)
-                return current;
+            if (current.value == value) return current;
             current = current.next;
         }
         return null;
@@ -191,7 +179,7 @@ public class DoublyLinkedList<T> implements Iterable<T> {
      * @param value The item to search for
      * @return True if the item is found, false otherwise.
      */
-    boolean contain(T value) {
+    public boolean contain(T value) {
         return find(value) != null;
     }
 

@@ -1,4 +1,4 @@
-### [Doubly Linked List](DoublyLinkedList.java)
+### Doubly Linked List
 
 A linked list that provides forward iteration from the start to the end of the list,
 and reverse iteration, from end to start.
