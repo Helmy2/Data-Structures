@@ -11,3 +11,10 @@
 
     A queue-like container which is both First-in, First-out and Last-in, Last-out.
 
+### [Stack](src/main/java/org/example/stack/README.md)
+
+    A Last-in, First-out (LIFO) data container.
+
+### [Queue](src/main/java/org/example/queue/README.md)
+
+    A First-in, First-out (FIFO) container.
