@@ -5,27 +5,27 @@ import org.example.linked_list.DoublyLinkedList;
 import java.util.NoSuchElementException;
 
 public class Deque<T> {
-    private final DoublyLinkedList<T> linkedList = new DoublyLinkedList<>();
+    private final DoublyLinkedList<T> store = new DoublyLinkedList<>();
 
     /**
      * @return The size of dequeue
      */
     public int getSize() {
-        return linkedList.size;
+        return store.size;
     }
 
     /**
      * Adds the specified value to the start of the dequeue
      */
     public void enqueueHead(T value) {
-        linkedList.addHead(value);
+        store.addHead(value);
     }
 
     /**
      * Adds the specified value to the end of the dequeue
      */
     public void enqueueTail(T value) {
-        linkedList.addTail(value);
+        store.addTail(value);
     }
 
     /**
@@ -34,8 +34,8 @@ public class Deque<T> {
      * @return the value which has been deleted
      */
     public T dequeueHead() {
-        T temp = linkedList.getHead();
-        linkedList.removeHead();
+        T temp = store.getHead();
+        store.removeHead();
         return temp;
     }
 
@@ -45,8 +45,8 @@ public class Deque<T> {
      * @return the value which has been deleted
      */
     public T dequeueTail() {
-        T temp = linkedList.getTail();
-        linkedList.removeTail();
+        T temp = store.getTail();
+        store.removeTail();
         return temp;
     }
 
@@ -55,7 +55,7 @@ public class Deque<T> {
      * @throws NoSuchElementException if the dequeue is empty
      */
     public T peekHead() {
-        var temp = linkedList.getHead();
+        var temp = store.getHead();
         if (temp == null)
             throw new NoSuchElementException();
         return temp;
@@ -66,7 +66,7 @@ public class Deque<T> {
      * @throws NoSuchElementException if the dequeue is empty
      */
     public T peekTail() {
-        var temp = linkedList.getTail();
+        var temp = store.getTail();
         if (temp == null)
             throw new NoSuchElementException();
         return temp;

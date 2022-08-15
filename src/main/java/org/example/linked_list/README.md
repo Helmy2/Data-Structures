@@ -5,8 +5,8 @@ and reverse iteration, from end to start.
 
 #### Usage
 
-- [Doubly Linked List implementation](DoublyLinkedListTest.java)
-- [Doubly Linked List Test](DoublyLinkedListTest.java)
+- [Doubly Linked List implementation](DoublyLinkedList.java)
+- [Doubly Linked List Test](../../../../../test/java/org/example/linked_list/DoublyLinkedListTest.java)
 - Create
     ```java
     DoublyLinkedList<Integer> linkedList = new DoublyLinkedList<>();
