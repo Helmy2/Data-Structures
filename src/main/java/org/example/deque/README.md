@@ -1,8 +1,17 @@
-### Doubly Ended Queue (deque)
+## Doubly Ended Queue (deque)
 
 A queue-like container which is both First-in, First-out and Last-in, Last-out.
 
-#### Usage
+![Deque](../../../../../../images/deque.webp)
+
+### Applications of Deque Data Structure
+
+- In undo operations on software.
+- To store history in browsers.
+- For implementing both stacks and queues.
+
+### Usage
+
 - Deque is based on [Doubly Linked List](../linked_list/README.md)
 - [Deque implementation](Deque.java)
 - [Deque Test](../../../../../test/java/org/example/deque/DequeTest.java)
