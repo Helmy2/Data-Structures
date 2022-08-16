@@ -37,7 +37,7 @@ A queue-like container which is both First-in, First-out and Last-in, Last-out.
 
   > Complexity **O(1)**
 
-- enqueueHead
+- enqueueTail
   ```java
   Integer value = 10;
   deque.enqueueTail(value);
