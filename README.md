@@ -18,3 +18,8 @@
 ### [Queue](src/main/java/org/example/queue/README.md)
 
     A First-in, First-out (FIFO) container.
+
+### [Binary Search Tree](src/main/java/org/example/binary_tree/README.md)
+
+A binary tree where nodes with lessor values are placed to the left of the root, and nodes with equal or greater values
+are placed to the right.
