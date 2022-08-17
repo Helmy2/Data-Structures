@@ -89,6 +89,153 @@ class BSTTest {
         assertTrue(empty);
     }
 
+
+    @Test
+    public void remove_Leaf() {
+        //          3
+        //      1      4
+        //        2
+        BST tree = new BST();
+        tree.add(3);
+        tree.add(1);
+        tree.add(4);
+        tree.add(2);
+
+        tree.remove(2);
+        assertTreeInOrder(tree, new Integer[]{1, 3, 4});
+
+        tree.remove(4);
+        assertTreeInOrder(tree, new Integer[]{1, 3});
+
+        tree.remove(1);
+        assertTreeInOrder(tree, new Integer[]{3});
+    }
+
+
+    @Test
+    public void remove_OneChild_Right() {
+        //          3
+        //      1      4
+        //        2
+        BST tree = new BST();
+        tree.add(3);
+        tree.add(1);
+        tree.add(4);
+        tree.add(2);
+
+        tree.remove(1);
+        assertTreeInOrder(tree, new Integer[]{2, 3, 4});
+    }
+
+    @Test
+    public void remove_OneChild_Left() {
+        //          3
+        //      2      4
+        //     1
+        BST tree = new BST();
+        tree.add(3);
+        tree.add(2);
+        tree.add(4);
+        tree.add(1);
+
+        tree.remove(2);
+        assertTreeInOrder(tree, new Integer[]{1, 3, 4});
+
+    }
+
+    @Test
+    public void remove_TwoChild() {
+        //          10
+        //      5       11
+        //     4  9
+        //    3  7
+        //        8
+        BST tree = new BST();
+        tree.add(10);
+        tree.add(5);
+        tree.add(4);
+        tree.add(9);
+        tree.add(7);
+        tree.add(8);
+        tree.add(3);
+        tree.add(11);
+
+        //          10
+        //      7       11
+        //     4  9
+        //    3  8
+        //
+        tree.remove(5);
+        assertTreeInOrder(tree, new Integer[]{3, 4, 7, 8, 9, 10, 11});
+    }
+
+    @Test
+    public void remove_Root_TwoChild() {
+        //          10
+        //      5        20
+        //    4   6    15
+        //           12
+        //             13
+        //               14
+        BST tree = new BST();
+        tree.add(10);
+        tree.add(5);
+        tree.add(4);
+        tree.add(6);
+
+        tree.add(20);
+        tree.add(15);
+        tree.add(12);
+        tree.add(13);
+        tree.add(14);
+
+        //          12
+        //      5        20
+        //    4   6    15
+        //           13
+        //             14
+        //
+        tree.remove(10);
+        assertTreeInOrder(tree, new Integer[]{4,5,6,12,13,14,15,20});
+
+
+        //          13
+        //      5        20
+        //    4   6    15
+        //           14
+        //
+        tree.remove(12);
+        assertTreeInOrder(tree, new Integer[]{4,5,6,13,14,15,20});
+    }
+
+    @Test
+    public void remove_Root_OneChild_Left() {
+        //          3
+        //      2
+        //     1
+        BST tree = new BST();
+        tree.add(3);
+        tree.add(2);
+        tree.add(1);
+
+        tree.remove(3);
+        assertTreeInOrder(tree, new Integer[]{1,2});
+    }
+
+    @Test
+    public void remove_Root_OneChild_Right() {
+        //          3
+        //            4
+        //              5
+        BST tree = new BST();
+        tree.add(3);
+        tree.add(4);
+        tree.add(5);
+
+        tree.remove(3);
+        assertTreeInOrder(tree, new Integer[]{4,5});
+    }
+
     @Test
     void preOrderTraversalTest() {
         var bst = new BST();
@@ -122,5 +269,12 @@ class BSTTest {
         bst.postOrderTraversal(valuesList::add);
 
         assert postOrderList.equals(valuesList);
+    }
+
+    private void assertTreeInOrder(BST tree, Integer[] array) {
+        var treeArray = new ArrayList<Integer>();
+        tree.inOrderTraversal(treeArray::add);
+
+        assertArrayEquals(array, treeArray.toArray());
     }
 }
