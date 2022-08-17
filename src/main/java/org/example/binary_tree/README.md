@@ -48,7 +48,7 @@ search tree
   > return The size of the BST
 
   > Complexity **O(1)**
-  
+
 
 - add
   ```java
@@ -58,7 +58,7 @@ search tree
   > Adds the provided value to the BST.
 
   > Complexity **O(log n)**
-  
+
 - contains
   ```java
   int value = 9;
@@ -75,6 +75,14 @@ search tree
   > Removes all items from the tree
 
   > Complexity **O(1)**
+
+- remove
+  ```java
+  boolean removed = remove(value);
+  ```
+  > RRemoves the first occurrence of the specified value from the tree.
+
+  > Complexity **O(n)**
 
 - preOrderTraversal
   ```java
