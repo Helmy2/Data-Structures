@@ -2,7 +2,7 @@
 
 A linked list that provides forward iteration from the start to the end of the list,
 and reverse iteration, from end to start.
-![Doubly linked list image](../../../../../../images/doubly-linked-list.webp)
+![Doubly linked list image](../images/doubly-linked-list.webp)
 We add a pointer to the previous node in a doubly-linked list. Thus, we can go in either direction: forward or backward.
 
 ### Time Complexity
@@ -26,8 +26,8 @@ We add a pointer to the previous node in a doubly-linked list. Thus, we can go i
 
 ### Usage
 
-- [Doubly Linked List implementation](DoublyLinkedList.java)
-- [Doubly Linked List Test](../../../../../test/java/org/example/linked_list/DoublyLinkedListTest.java)
+- [Doubly Linked List implementation](../src/main/java/org/example/linked_list/DoublyLinkedList.java)
+- [Doubly Linked List Test](../src/test/java/org/example/linked_list/DoublyLinkedListTest.java)
 - Create
     ```java
     DoublyLinkedList<Integer> linkedList = new DoublyLinkedList<>();

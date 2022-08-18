@@ -2,7 +2,7 @@
 
 A Last-in, First-out (LIFO) data container.
 
-![Stack image](../../../../../../images/stack.webp)
+![Stack image](../images/stack.webp)
 
 ### Applications of Stack Data Structure
 
@@ -16,9 +16,9 @@ A Last-in, First-out (LIFO) data container.
 
 ### Usage
 
-- Deque is based on [Deque](../deque/README.md)
-- [Stack implementation](Stack.java)
-- [Stack Test](../../../../../test/java/org/example/stack/StackTest.java)
+- Deque is based on [Deque](DEQUQ.md)
+- [Stack implementation](../src/main/java/org/example/stack/Stack.java)
+- [Stack Test](../src/test/java/org/example/stack/StackTest.java)
 - Create
     ```java
     Stack<Integer> stack = new Stack<>();

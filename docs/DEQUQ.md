@@ -2,7 +2,7 @@
 
 A queue-like container which is both First-in, First-out and Last-in, Last-out.
 
-![Deque](../../../../../../images/deque.webp)
+![Deque](../images/deque.webp)
 
 ### Applications of Deque Data Structure
 
@@ -12,9 +12,9 @@ A queue-like container which is both First-in, First-out and Last-in, Last-out.
 
 ### Usage
 
-- Deque is based on [Doubly Linked List](../linked_list/README.md)
-- [Deque implementation](Deque.java)
-- [Deque Test](../../../../../test/java/org/example/deque/DequeTest.java)
+- Deque is based on [Doubly Linked List](LINKED_LIST.md)
+- [Deque implementation](../src/main/java/org/example/deque/Deque.java)
+- [Deque Test](../src/test/java/org/example/deque/DequeTest.java)
 - Create
     ```java
   Deque<Integer> deque = new Deque<>();

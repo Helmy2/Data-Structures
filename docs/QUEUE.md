@@ -2,7 +2,7 @@
 
 A First-in, First-out (FIFO) container.
 
-![Queue image](../../../../../../images/queue.webp)
+![Queue image](../images/queue.webp)
 
 ### Complexity
 
@@ -19,9 +19,9 @@ If you use pop(N) in python code, then the complexity might be O(n) depending on
 
 ### Usage
 
-- Deque is based on [Deque](../deque/README.md)
-- [Queue implementation](Queue.java)
-- [Queue Test](../../../../../test/java/org/example/queue/QueueTest.java)
+- Deque is based on [Deque](DEQUQ.md)
+- [Queue implementation](../src/main/java/org/example/queue/Queue.java)
+- [Queue Test](../src/test/java/org/example/queue/QueueTest.java)
 - Create
     ```java
     Queue<Integer> queue = new Queue<>();

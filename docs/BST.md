@@ -2,7 +2,7 @@
 
 A binary tree where nodes with lessor values are placed to the left of the root, and nodes with equal or greater values
 are placed to the right.
-![BST image](../../../../../../images/bst-vs-not-bst.webp)
+![BST image](../images/bst-vs-not-bst.webp)
 A tree having a right subtree with one value smaller than the root is shown to demonstrate that it is not a valid binary
 search tree
 
@@ -26,8 +26,8 @@ search tree
 
 ### Usage
 
-- [BST implementation](BST.java)
-- [BST Test](../../../../../test/java/org/example/binary_tree/BSTTest.java)
+- [BST implementation](../src/main/java/org/example/binary_tree/BST.java)
+- [BST Test](../src/test/java/org/example/binary_tree/BSTTest.java)
 - Create
     ```java
     BST bst = new BST();
