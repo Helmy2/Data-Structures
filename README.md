@@ -23,3 +23,7 @@
 
     A binary tree where nodes with lessor values are placed to the left of the root, and nodes with equal or greater values
     are placed to the right.
+
+### [Hash Table](docs/Hash_Table.md)
+
+    An associative array container that provides O(1) insert, delete and search operations.
